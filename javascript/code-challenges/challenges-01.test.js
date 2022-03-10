@@ -12,7 +12,7 @@ const addOne = (arr) => {
   const localArr = [];
 
   arr.forEach(num => {
-    localArr.push(num +1);
+    localArr.push(num + 1);
   });
   return localArr;
 };
@@ -26,7 +26,12 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
+  const newArray = [];
+
+  arr.forEach(stri => {
+    newArray.push(stri + '!');
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,8 +43,14 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const strinArr = [];
+
+  arr.forEach(strin => {
+    strinArr.push(strin.toUpperCase());
+  });
+  return strinArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -52,7 +63,12 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  const stringArray =[];
+
+  word.forEach(string => {
+    stringArray.push(string.toUpperCase() + '!');
+  });
+  return stringArray;
 };
 
 const speaker = (words, callback) => {
@@ -76,11 +92,14 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  for(let i= 0; i < times; i++) {
+    callback(arr,num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
