@@ -43,12 +43,21 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
+for-each
   const strinArr = [];
 
   arr.forEach(strin => {
     strinArr.push(strin.toUpperCase());
   });
   return strinArr;
+
+  const stringArr = [];
+
+  arr.forEach(strin => {
+    stringArr.push(strin.allUpperCase);
+  });
+  return stringArr;
+main
 };
 
 
@@ -96,8 +105,13 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
+for-each
   for(let i= 0; i < times; i++) {
     callback(arr,num);
+
+  for(let i = 0; i < times; i++) {
+    callback(arr, num);
+main
   }
   return arr;
 };
