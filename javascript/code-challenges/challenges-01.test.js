@@ -12,7 +12,7 @@ const addOne = (arr) => {
   const localArr = [];
 
   arr.forEach(num => {
-    localArr.push(num +1);
+    localArr.push(num + 1);
   });
   return localArr;
 };
@@ -43,13 +43,23 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
+for-each
+  const strinArr = [];
+
+  arr.forEach(strin => {
+    strinArr.push(strin.toUpperCase());
+  });
+  return strinArr;
+
   const stringArr = [];
 
   arr.forEach(strin => {
     stringArr.push(strin.allUpperCase);
   });
   return stringArr;
+main
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -62,7 +72,12 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  const stringArray =[];
+
+  word.forEach(string => {
+    stringArray.push(string.toUpperCase() + '!');
+  });
+  return stringArray;
 };
 
 const speaker = (words, callback) => {
@@ -90,8 +105,13 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
+for-each
+  for(let i= 0; i < times; i++) {
+    callback(arr,num);
+
   for(let i = 0; i < times; i++) {
     callback(arr, num);
+main
   }
   return arr;
 };
