@@ -21,7 +21,6 @@ function lower(str) {
   return str.toLowerCase();
 }
 
-<<<<<<< HEAD
 const updateAnimal = (arr, animal) => {
   const animalArr = [];
 
@@ -30,10 +29,6 @@ const updateAnimal = (arr, animal) => {
   });
   return animalArr;
 
-=======
-const updateAnimal = (arr, callback) => {
-  // Solution code here...
->>>>>>> 2040f33c788e7811c275b56cffc4f5816802cf5d
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,16 +40,9 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-<<<<<<< HEAD
   sortNames.sort(arr);
   return arr.sort(arr);
 };
-=======
-  sortNames (arr) => {
-    return sortNames.toUpperCase;
-  }
-});
->>>>>>> 2040f33c788e7811c275b56cffc4f5816802cf5d
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
