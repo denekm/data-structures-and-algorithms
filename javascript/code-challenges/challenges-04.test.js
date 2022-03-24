@@ -107,7 +107,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  return arr.sort((a,b) => a.toLowerCase-b.toLowerCase);
+  return arr.sort((a,b) => a.toLowerCase()>b.toLowerCase() ? 1 : (b.toLowerCase()>a.toLowerCase() ? -1: 0));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+  return arr.sort((a,b) => a.length-b.length);
 };
 
 /*-----------------------------------------------------------------------------------------------
