@@ -42,10 +42,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  return arr.reduce((accumulator, purchasePrice) =>{
-    accumulator = accumulator + purchasePrice;
+  return arr.reduce((accumulator, value) => {
+    accumulator = accumulator + value.purchasePrice;
     return accumulator;
-  }, {} );
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,7 +57,10 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  return arr.reduce(accumulator => {
+    accumulator = accumulator + 1 ;
+    return accumulator;
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +121,10 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  return arr.reduce((accumulator,value) => {
+    accumulator = value.name.length;
+    return accumulator;
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,7 +136,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  let arr = str.split('');
+  return arr.reduce((accumulator,value) => {
+    accumulator = value + accumulator;
+    return accumulator;
+  },'');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -183,7 +193,10 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce((accumulator, value) => {
+    accumulator += value.children ? value.children.length : 0;
+    return accumulator;
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -330,7 +343,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
