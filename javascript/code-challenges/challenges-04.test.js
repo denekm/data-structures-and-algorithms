@@ -22,6 +22,10 @@ function lower(str) {
 }
 
 
+const updateAnimal = (arr, callback) => {
+  // Solution code here...
+
+
 const updateAnimal = (arr, callBack) => {
 
 const updateAnimal = (arr, animal) => {
@@ -32,6 +36,7 @@ const updateAnimal = (arr, animal) => {
     animalArr.push(callBack(string));
   });
   return animalArr;
+
 
 };
 
@@ -45,12 +50,19 @@ For example: 'Cat' would come before 'apple'
 
 const sortNames = (arr) => {
 
+  sortNames (arr) => {
+    return sortNames.toUpperCase;
+  }
+});
+
+
   return arr.sort();
 =======
   sortNames.sort(arr);
   return arr.sort(arr);
 
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
