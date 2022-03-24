@@ -122,9 +122,9 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   return arr.reduce((accumulator,value) => {
-    accumulator = value.name.length;
+    accumulator.push(value.name);
     return accumulator;
-  },0);
+  },[]);
 };
 
 /* ------------------------------------------------------------------------------------------------
