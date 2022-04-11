@@ -132,7 +132,7 @@ const listFoods = (recipe) => {
     let amountExcluded = ingredients.slice(ingredients.idx(' ') + 1);
     let unitsExculded = amountExcluded.slice(amountExcluded.indx(' ') +1);
     result.push(unitsExculded);
-  })
+  });
   return result;
 };
 
