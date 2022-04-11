@@ -21,6 +21,13 @@ function lower(str) {
   return str.toLowerCase();
 }
 
+
+const updateAnimal = (arr, animalFunction) => {
+  const animalArr = [];
+
+  arr.forEach(string => {
+    animalArr.push(animalFunction(string));
+
 const updateAnimal = (arr, callback) => {
   // Solution code here...
 
@@ -33,6 +40,7 @@ const updateAnimal = (arr, animal) => {
 
   arr.forEach(string => {
     animalArr.push(callBack(string));
+
   });
   return animalArr;
 
@@ -47,6 +55,9 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
+
+  return arr.sort();
+
 
   sortNames.sort(arr);
   return arr.sort(arr);
@@ -76,7 +87,12 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
+
+  return parseInt(arr.sort());
+
+
   return arr.sort((a,b) => a-b);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
