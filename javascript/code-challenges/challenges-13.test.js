@@ -7,7 +7,11 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-// Solution code here...
+  let currentlongest = { string: '', index: -1 };
+  arr.forEach((str, idx) => {
+    str.length > currentlongest.string.length ? currentlongest = {string: str, index: idx} : '';
+  });
+  return currentlongest.index;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +47,7 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  return arr.map( num => num.includes(Number));
+  return arr.map(num => num.includes(Number));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,7 +162,7 @@ describe('Testing challenge 1', () => {
   test('It should return an index position of the longest string', () => {
     const strArray1 = ['Ginger', 'Goose', 'Tangerine', 'Rosie', 'Mario', 'Malaki']
     const strArray2 = [];
-    const strArray3= ['Ginger']
+    const strArray3 = ['Ginger']
 
     expect(longestString(strArray1)).toStrictEqual(2);
     expect(longestString(strArray2)).toStrictEqual(-1);
