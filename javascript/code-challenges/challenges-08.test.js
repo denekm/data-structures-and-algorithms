@@ -64,7 +64,7 @@ const sortByChildren = (charArray) => {
       // } else {
       //   return 1;
       // }
-      return a.house < b.house ? -1: 1;
+      return a.house < b.house ? -1 : 1;
     }
   });
 };
@@ -77,7 +77,11 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
+
   return /[w]/g.test(str);
+
+  /w/g;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
