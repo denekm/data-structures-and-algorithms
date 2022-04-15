@@ -34,7 +34,7 @@ const courseInfo = {
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
+  return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // Solution code here...
+  return Object.values(obj).includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,7 +69,8 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  // eslint-disable-next-line quotes
+  return Object.entries(obj).map((value) => value[0] + ": " + value[1]);
 };
 
 
@@ -125,7 +126,9 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  for (let obj of arr) {
+    houses.push(obj.house);
+  }
   return houses;
 };
 
@@ -142,7 +145,6 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
 
 };
 
