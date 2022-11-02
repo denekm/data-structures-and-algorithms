@@ -1,4 +1,4 @@
-package collections.LinkedList;
+package collections.LinkedLists;
 
 
 public class LinkedList {
@@ -44,12 +44,12 @@ public class LinkedList {
     Node curNode = head;
     Node preNode = curNode;
 
-    if (curNode == null){
+    if (curNode == null) {
       return;
     }
 
-    while(curNode.value != value){
-      if (curNode.next == null){
+    while (curNode.value != value) {
+      if (curNode.next == null) {
         return;
       }
       preNode = curNode;
@@ -65,12 +65,12 @@ public class LinkedList {
   public void insertAfter(String value) {
     Node curNode = head;
 
-    if (curNode == null){
+    if (curNode == null) {
       return;
     }
 
-    while(curNode.value != value){
-      if (curNode.next == null){
+    while (curNode.value != value) {
+      if (curNode.next == null) {
         return;
       }
       curNode = curNode.next;
@@ -80,6 +80,37 @@ public class LinkedList {
 
     newNode.next = curNode;
     curNode.next = newNode;
+  }
+
+  public LinkedList reverseList(LinkedList input) {
+    Node cur = input.head;
+    Node pre = null;
+    Node tmp;
+
+    while (cur != null) {
+      tmp = cur.next;
+      cur.next = pre;
+      pre = cur;
+      cur = tmp;
+    }
+    input.head = pre;
+    return input;
+  }
+
+
+  public String findKthLinkedList(int kth, LinkedList input) {
+    int count = 0;
+    LinkedList reverseInput = reverseList(input);
+    Node cur = reverseInput.head;
+    while (cur != null) {
+      if (count == kth) {
+        return cur.value;
+      }
+      count++;
+      cur = cur.next;
+
+    }
+    return cur.value;
   }
 
   @Override
@@ -95,3 +126,4 @@ public class LinkedList {
     return result;
   }
 }
+
